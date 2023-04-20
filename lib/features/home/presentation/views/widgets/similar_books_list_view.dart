@@ -16,14 +16,15 @@ class SimilarBooksListview extends StatelessWidget {
         if (state is SimilarBooksCubitSuccess) {
   return SizedBox(
     height: MediaQuery.of(context).size.height * .13,
+    
     child: ListView.builder(
+      itemCount:state.books.length ,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
-        return const Padding(
+        return  Padding(
           padding: EdgeInsets.symmetric(horizontal: 8),
           child: CustomBookImage(
-            imageUrl:
-                'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/yellow-business-leadership-book-cover-design-template-dce2f5568638ad4643ccb9e725e5d6ff_screen.jpg?ts=1637017516',
+            imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail??''
           ),
         );
       },
