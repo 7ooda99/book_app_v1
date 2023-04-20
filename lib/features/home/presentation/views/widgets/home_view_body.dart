@@ -8,7 +8,7 @@ import 'best_seller_list_view.dart';
 import 'featured_book_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+   HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class HomeViewBody extends StatelessWidget {
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children:  [
               Padding(
                 padding: EdgeInsets.only(left: 30),
                 child: CustomAppBar(),
